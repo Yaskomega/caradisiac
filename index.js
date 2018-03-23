@@ -1,7 +1,7 @@
 var elasticsearch = require('elasticsearch');
 const {getBrands} = require('node-car-api');
 const {getModels} = require('node-car-api');
-var jsonfile = require('jsonfile');
+//var jsonfile = require('jsonfile');
 
 
 var client = new elasticsearch.Client({  // default is fine for me, change as you see fit
@@ -26,9 +26,9 @@ async function getAllModels() {
         });
     }
 
-    console.log("SAVING IN JSON FILE");
-    var file = './tmp/data.json';
-    jsonfile.writeFileSync(file, all_models);
+    //console.log("SAVING IN JSON FILE");
+    //var file = './tmp/data.json';
+    //jsonfile.writeFileSync(file, all_models);
 
     return all_models;
 }
